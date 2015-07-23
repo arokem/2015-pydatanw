@@ -69,7 +69,7 @@
 			<div class="slides">
 				<section>
 					<img src="images/dipy-logo.png" alt="DIPY logo" align="middle" style="background:none; border:none; box-shadow:none;">
-					<h2>Statistical learning of brain structure in Dipy</h2>
+					<h2>Statistical learning of human brain structure</h2>
 					<p><a href="http://arokem.org">Ariel Rokem</a>, <a href="http://escience.washington.edu">University of Washington eScience Institute</a> </p>
 					<p class="fragment"> Follow along at <t><a href="http://arokem.github.io/2015-pydatanw/">http://arokem.github.io/2015-pydatanw/</t></a></p>
 				</section>
@@ -372,17 +372,17 @@
 				</section>
 
 				<section>
-				<div style="position: absolute; left: -200px; top: 150px;">
+				<div style="position: absolute; left: 0px; top: 150px;">
 				Algorithm 1
 				</div>
-				<div style="position: absolute; left: -200px; top: 450px;">
+				<div style="position: absolute; left: 0px; top: 350px;">
 				Algorithm 2
 				</div>
-				<div class="fragment" style="position: absolute; left: 0px;">
-				<img src="images/two-algs.png" style="background:none; border:none; box-shadow:none;" height="600px;">
+				<div class="fragment" style="position: absolute; left: 200px;">
+				<img src="images/two-algs.png" style="background:none; border:none; box-shadow:none;" height="400px;">
 				</div>
 				<div class="fragment" style="position: absolute; left: 500px; top:-40px">
-				<img src="images/two-algs-conn.png" style="background:none; border:none; box-shadow:none;" height="700px;">
+				<img src="images/two-algs-conn.png" style="background:none; border:none; box-shadow:none;" height="500px;">
 				</div>
 
 				</section>
@@ -549,13 +549,13 @@
 					<h3>When you've only measured once</h3>
 					<p class="fragment"><a href="http://nipy.org/dipy/examples_built/kfold_xval.html#example-kfold-xval">k-fold cross-validation</a>
 				<code>
-				<div align="left" style="position:absolute; 	left: -100px">
+				<div align="left" style="position:absolute; 	left: 0px">
 				<p class="fragment" align="left">
 				# Use a k of 2
 				<p class="fragment" align="left">
-				dti_prediction=kfold_xval(dti_model, data, 2)
+				dti_pred = kfold_xval(dti_model, data, 2)
 				<p class="fragment" align="left">
-				csd_prediction=kfold_xval(csd_model, data, 2)
+				csd_pred = kfold_xval(csd_model, data, 2)
 				</code>
 				</div>
 				</section>
@@ -700,12 +700,12 @@
 				</section>
 				<section>
 				<code>
-				<div align="left" style="position:absolute; left: -180px; top:-100px;">
+				<div align="left" style="position:absolute; left: 0px; top:-100px;">
 				<p class="fragment">
 					fiber_model = life.FiberModel(gtab)
 				<p class="fragment" align="left">
-					fit = fiber_model.fit(data, tracks) # => FiberFit
-				<p class="fragment" align="left">
+					fit = fiber_model.fit(data, tracks)
+			<p class="fragment" align="left">
 					prediction = fit.predict(gtab)
 				<p class="fragment">
 					optimized_tracks = tracks[fit.beta>0]
